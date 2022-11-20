@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import Phone from "./components/phone/Phone";
-import "./App.css";
 import MessageContainer from "./components/message/MessageContainer";
 import SearchBar from "./components/search/SearchBar";
+import "./App.css";
+import Header from "./components/header/Header";
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -25,6 +26,7 @@ function App() {
   return (
     <div className="App">
       <Phone>
+        <Header />
         <SearchBar />
         <MessageContainer messages={messages} />
       </Phone>
