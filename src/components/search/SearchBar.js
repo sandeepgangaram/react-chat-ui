@@ -8,7 +8,11 @@ const SearchBar = ({ filterData }) => {
     filterData(e.target.value);
     setValue(e.target.value);
   };
-  return <input value={value} onChange={changeHandler} />;
+  return (
+    <div className="search-bar">
+      <input placeholder="Search" value={value} onChange={changeHandler} />;
+    </div>
+  );
 };
 
 export default SearchBar;

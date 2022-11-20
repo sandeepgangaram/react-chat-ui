@@ -10,7 +10,9 @@ const MessageCard = ({ message }) => {
       </div>
       <div className="message-card-text">
         <h5>{`${name.first} ${name.last}`}</h5>
-        <p>{cell}</p>
+        <p>
+          <em>{cell}</em>
+        </p>
       </div>
     </div>
   );

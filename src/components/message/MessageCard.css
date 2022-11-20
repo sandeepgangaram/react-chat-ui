@@ -1,5 +1,15 @@
 .message-card {
   display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #aaa;
+  width: 100%;
+}
+
+.message-card:hover {
+  background-color: blueviolet;
+  color: #fff;
 }
 
 .message-card-img {
@@ -7,9 +17,22 @@
 
 .message-card-img img {
   border-radius: 50%;
+  border: 2px solid blueviolet;
 }
 
 .message-card-text {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.message-card-text h5 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.message-card p {
+  font-size: 1.2rem;
 }
