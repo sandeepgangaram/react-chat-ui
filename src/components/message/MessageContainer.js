@@ -1,12 +1,14 @@
 import MessageCard from "./MessageCard";
 import "./MessageContainer.css";
 
-const MessageContainer = ({ messages }) => {
+const MessageContainer = ({ messages, loading }) => {
   return (
     <div className="message-container">
-      {messages.map((message, i) => (
-        <MessageCard key={i} message={message} />
-      ))}
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        messages.map((message, i) => <MessageCard key={i} message={message} />)
+      )}
     </div>
   );
 };

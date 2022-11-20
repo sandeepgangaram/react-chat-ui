@@ -7,9 +7,11 @@ import Header from "./components/header/Header";
 
 function App() {
   const [messages, setMessages] = useState([]);
+  const [loading, setLoading] = useState(false);
   const messagesRef = useRef([]);
 
   useEffect(() => {
+    setLoading(true);
     const getData = async function () {
       const res = await fetch(
         "https://randomuser.me/api/?results=20&inc=name,picture,id,cell&nat=in"
@@ -22,7 +24,10 @@ function App() {
         messagesRef.current = data;
         setMessages(data);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   const filterData = (query) => {
@@ -39,7 +44,7 @@ function App() {
       <Phone>
         <Header />
         <SearchBar filterData={filterData} />
-        <MessageContainer messages={messages} />
+        <MessageContainer messages={messages} loading={loading} />
       </Phone>
     </div>
   );
