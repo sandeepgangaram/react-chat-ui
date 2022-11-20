@@ -1,10 +1,11 @@
 import "./Phone.css";
 
-const Phone = () => {
+const Phone = (props) => {
   return (
     <div className="iphone-x">
       <i>Speaker</i>
       <b>Camera</b>
+      {props.children}
     </div>
   );
 };
