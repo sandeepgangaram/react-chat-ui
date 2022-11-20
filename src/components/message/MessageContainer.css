@@ -3,6 +3,8 @@
   flex-direction: column;
   height: 90%;
   width: 100%;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
   overflow-y: scroll;
   scroll-behavior: smooth;
   overflow-x: hidden;
