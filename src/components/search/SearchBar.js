@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./SearchBar.css";
 
-const SearchBar = () => {
+const SearchBar = ({ filterData }) => {
   const [value, setValue] = useState("");
 
   const changeHandler = (e) => {
-    console.log(e.target.value);
+    filterData(e.target.value);
     setValue(e.target.value);
   };
   return <input value={value} onChange={changeHandler} />;

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Phone from "./components/phone/Phone";
 import MessageContainer from "./components/message/MessageContainer";
 import SearchBar from "./components/search/SearchBar";
@@ -7,6 +7,7 @@ import Header from "./components/header/Header";
 
 function App() {
   const [messages, setMessages] = useState([]);
+  const messagesRef = useRef([]);
 
   useEffect(() => {
     const getData = async function () {
@@ -18,16 +19,26 @@ function App() {
     };
     getData()
       .then((data) => {
+        messagesRef.current = data;
         setMessages(data);
       })
       .catch((err) => console.log(err));
   }, []);
 
+  const filterData = (query) => {
+    const filteredData = messagesRef.current.filter(
+      (message) =>
+        message.name.first.toLowerCase().includes(query.toLowerCase()) ||
+        message.name.last.toLowerCase().includes(query.toLowerCase())
+    );
+    setMessages(filteredData);
+  };
+
   return (
     <div className="App">
       <Phone>
         <Header />
-        <SearchBar />
+        <SearchBar filterData={filterData} />
         <MessageContainer messages={messages} />
       </Phone>
     </div>
