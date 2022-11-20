@@ -3,7 +3,7 @@ import "./MessageContainer.css";
 
 const MessageContainer = ({ messages, loading }) => {
   return (
-    <div className="message-container">
+    <div className="message-container" id="style-scrollbar">
       {loading ? (
         <p>Loading...</p>
       ) : (

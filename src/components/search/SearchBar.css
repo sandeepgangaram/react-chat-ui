@@ -1,11 +1,11 @@
 .search-bar {
   padding: 2rem;
-  background-color: blueviolet;
+  background-color: #999;
   width: 100%;
 }
 
 .search-bar input {
-  border: 1px solid blue;
+  border: 1px solid rgb(28, 58, 148);
   border-radius: 100px;
   height: 2.5rem;
   width: 80%;

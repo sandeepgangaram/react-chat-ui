@@ -8,7 +8,7 @@
 }
 
 .message-card:hover {
-  background-color: blueviolet;
+  background-color: rgb(73, 125, 189);
   color: #fff;
 }
 
@@ -17,7 +17,7 @@
 
 .message-card-img img {
   border-radius: 50%;
-  border: 2px solid blueviolet;
+  border: 2px solid rgb(73, 125, 189);
 }
 
 .message-card-text {
