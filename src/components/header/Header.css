@@ -1,0 +1,11 @@
+.main-header {
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  background-color: #777;
+  width: 100%;
+  z-index: -1;
+  color: #fff;
+}
+
+.main-header h1 {
+  padding: 1rem 0 0;
+}

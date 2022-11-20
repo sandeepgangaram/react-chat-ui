@@ -1,10 +1,11 @@
 import MessageCard from "./MessageCard";
+import "./MessageContainer.css";
 
 const MessageContainer = ({ messages }) => {
   return (
-    <div>
+    <div className="message-container">
       {messages.map((message, i) => (
-        <MessageCard key={i} />
+        <MessageCard key={i} message={message} />
       ))}
     </div>
   );

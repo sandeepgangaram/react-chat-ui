@@ -1,0 +1,15 @@
+.message-card {
+  display: flex;
+}
+
+.message-card-img {
+}
+
+.message-card-img img {
+  border-radius: 50%;
+}
+
+.message-card-text {
+  display: flex;
+  flex-direction: column;
+}
