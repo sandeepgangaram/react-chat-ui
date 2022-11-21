@@ -10,7 +10,12 @@ const SearchBar = ({ filterData }) => {
   };
   return (
     <div className="search-bar">
-      <input placeholder="Search" value={value} onChange={changeHandler} />;
+      <input
+        type="text"
+        placeholder="Search"
+        value={value}
+        onChange={changeHandler}
+      />
     </div>
   );
 };
