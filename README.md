@@ -4,9 +4,10 @@ Deployed at - [https://react-chat-sandev.netlify.app/](https://react-chat-sandev
 
 ## Features
 
-- Display Chat
-- Search
-- Filter According to User Names
+- Display Contacts
+- Search by text input
+- Filter According to Names
+- Custom styled scrollbar
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
