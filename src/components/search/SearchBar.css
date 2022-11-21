@@ -5,7 +5,7 @@
 }
 .search-bar input[type="text"] {
   width: 80%;
-  padding: 4px 8px;
+  padding: 6px 12px;
   border: 1px solid #ccc;
   border-radius: 100px;
   -webkit-transition: 0.5s;
